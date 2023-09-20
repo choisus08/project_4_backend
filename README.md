@@ -18,13 +18,13 @@ Flexi Shift is an app that conveniently helps employers and employees schedule i
 
 ## Backend Endpoints
 
-| Name | ENDPOINT | METHOD | PURPOSE |
+| ENDPOINT | METHOD | PURPOSE |
 |------|----------|--------|---------|
-|INDEX| /shift | GET | return list of shift entries|
-|DESTROY| /shift/:id | DELETE | delete a shift entry from database |
-|UPDATE| /shift/:id | PUT | receive info & update shift entry in database |
-|CREATE| /shift | POST | receive info from new form & create new shift entry in database |
-|SHOW| /shift/:id | GET | render page with the shift entry|
+| /shift | GET | return list of shift entries|
+| /shift/:id | DELETE | delete a shift entry from database |
+| /shift/:id | PUT | receive info & update shift entry in database |
+| /shift | POST | receive info from new form & create new shift entry in database |
+| /shift/:id | GET | render page with the shift entry|
 </br>
 
 ## ERD
@@ -32,12 +32,13 @@ Flexi Shift is an app that conveniently helps employers and employees schedule i
 ``` mermaid
 erDiagram
     USER {
+        id primaryKey
         username string 
         password string
     }
     USER ||--|{ SHIFTS : Create
     SHIFTS {
-        Name string 
+        Name foreignKey
         Position string
         Date string 
         ShiftStartTime string 
