@@ -19,7 +19,7 @@ Flexi Shift is an app that conveniently helps employers and employees schedule i
 ## Backend Endpoints
 
 | ENDPOINT | METHOD | PURPOSE |
-|------|----------|--------|---------|
+|----------|--------|---------|
 | /shift | GET | return list of shift entries|
 | /shift/:id | DELETE | delete a shift entry from database |
 | /shift/:id | PUT | receive info & update shift entry in database |
