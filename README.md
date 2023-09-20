@@ -3,6 +3,7 @@
 
 
 ## Descripton
+Flexi Shift is an app that conveniently helps employers and employees schedule individual work shifts. Users can view their manually added list of shifts and the calendar month of choice displaying all other reserved shifts added by supervisors, colleagues, or coworkers. 
 </br>
 
 ## Link
@@ -30,35 +31,16 @@
 
 ``` mermaid
 erDiagram
-    HOME {
-        name string 
-        position string
-        shiftDate string 
-        shiftStartTime string 
-        shiftEndTime string 
+    USER {
+        username string 
+        password string
     }
-    HOME ||--|{ CREATE : createEntry
-    CREATE {
-        name string 
-        position string
-        shiftDate string 
-        shiftStartTime string 
-        shiftEndTime string 
-    }
-    HOME ||--|{ EDIT : editEntry
-    EDIT {
-        name string 
-        position string
-        shiftDate string 
-        shiftStartTime string 
-        shiftEndTime string  
-    }
-    HOME ||--|{ DELETE : deleteEntry
-    DELETE {
-        name string 
-        position string
-        shiftDate string 
-        shiftStartTime string 
-        shiftEndTime string  
+    USER ||--|{ SHIFTS : Create
+    SHIFTS {
+        Name string 
+        Position string
+        Date string 
+        ShiftStartTime string 
+        ShiftEndTime string 
     }
 ```
